@@ -1,0 +1,129 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+
+set textobj-entire
+set ReplaceWithRegister
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+
+""" [M]ultiple Cursor Plugin Remaps
+
+" Next [W]hole Occurance
+map <C-w> <Plug>NextWholeOccurence
+
+
+" [N]ext Occurance
+map <C-n> <Plug>NextOccurrence
+
+" [S]kip Occurance
+map <C-s> <Plug>SkipOccurrence
+
+" [R]emove Occurance
+map <C-r> <Plug>RemoveOccurrence
+ 
+""" Code Actions
+
+map <leader>ca <Action>ShowIntentionActions
+
+""" Misc Remaps
+
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>r <Action>(RenameElement) 
+
+map <leader>s <Action>(SaveAll)
+
+""" [L]ine Actions
+
+map <C-u> <Action>(MoveLineUp)
+map <C-d> <Action>(MoveLineDown)
+
+"" Open [F]ile [S]tructure
+
+map <leader>fs <Action>(FileStructurePopup) 
+
+""" [S]earch Actions
+
+map <leader>sf <Action>(SearchEverywhere)
+map <leader>si <Action>(FindInPath)
+
+""" Running [A]pplication Actions
+
+map <leader>ad <Action>(Debug)
+map <leader>ar <Action>(Run)
+map <leader>as <Action>(Stop)
+
+""" [D]ebug Actions
+
+map <leader>db <Action>(ToggleLineBreakpoint)
+
+""" t = gi[T] actions
+
+" Go to [g]it [b]ranches
+map <leader>gb <Action>(Git.Branches)
+
+" [g]it [f]etch
+map <leader>gf <Action>(Git.Fetch)
+
+" [g]it [p]ull
+map <leader>gp <Action>(Git.Pull)
+
+" [g]it [s]tash
+map <leader>gs <Action>(Git.Stash)
+
+" open [g]it] [c]ommit tree windiow
+map <leader>gc <Action>(ActivateCommitToolWindow)
+
+" open [g]it di[f]f window
+map <leader>gd <Action>(Compare.SameVersion)
+
+""" g = [G]oto Actions
+
+" [G]oto declaration
+map <leader>gd <Action>(GotoDeclaration)
+
+" [G]oto next error
+map <leader>ge <Action>(GotoNextError)
+
+" [G]oto file in [p]roject view
+map <leader>gp <Action>(SelectInProjectView)
+
+""" Navigation Actions
+
+map <leader>h <Action>(PreviousTab)
+map <leader>l <Action>(NextTab)
+
+map <leader>ho <Action>(QuickJavaDoc)
+
+""" [V]ue Actions
+
+map <leader>vc <Action>(CreateVueSingleFileComp)
+
+""" [C]opy Actions
+
+" [C]opy [F]ile
+map <leader>cf <Action>(CopyElement)
+
+" [N]ew [D]irectory
+map <leader>nd <Action>(NewDir)
