@@ -22,15 +22,6 @@ return {
 
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    "lua_ls",
-                    "gopls",
-                    "volar",
-                    "tsserver",
-                    "phpstan",
-                    "phpactor",
-                    "php-debug-adapter",
-                    "eslint_d",
-                    "stylua"
                 },
                 handlers = {
                     function(server_name)
