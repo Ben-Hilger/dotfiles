@@ -390,6 +390,7 @@ require("lazy").setup({
 				volar = {
 					filetypes = { "vue", "typescript", "javascript" },
 				},
+				gopls = {},
 				lua_ls = {
 					-- cmd = {...},
 					-- filetypes = { ...},
@@ -412,7 +413,10 @@ require("lazy").setup({
 			vim.list_extend(ensure_installed, {
 				"stylua",
 				"eslint_d",
-				"prettierd", -- Used to format Lua code
+				"prettierd",
+				"php-debug-adapter",
+				"phpstan",
+				"phpactor", -- Used to format Lua code
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 
@@ -685,10 +689,10 @@ require("lazy").setup({
 	--  Here are some example plugins that I've included in the Kickstart repository.
 	--  Uncomment any of the lines below to enable them (you will need to restart nvim).
 	--
-	-- require 'kickstart.plugins.debug',
-	-- require 'kickstart.plugins.indent_line',
-	-- require 'kickstart.plugins.lint',
-	-- require 'kickstart.plugins.autopairs',
+	require("bendev404.plugins.debug"),
+	require("bendev404.plugins.indent_line"),
+	require("bendev404.plugins.lint"),
+	require("bendev404.plugins.autopairs"),
 	-- require 'kickstart.plugins.neo-tree',
 	-- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
